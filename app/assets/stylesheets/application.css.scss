@@ -16,6 +16,13 @@
  @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+#Middle-text {
+
+	margin-left: 21%;
+margin-bottom: 5%;
+}
+
 /* Navbar */
 
 .navbar-brand {
@@ -82,8 +89,8 @@ footer.navbar-inverse {
 .container-fluid-user-home {
 	margin-bottom: 25%;
 	margin-top: 10%;
-	margin-right: 25%;
-	margin-left: 25%;
+	margin-right: 10%;
+	margin-left: 10%%;
 	padding-left: 0px;
 	padding-right: 0px;
 }
@@ -96,8 +103,8 @@ footer.navbar-inverse {
 
 #button-middle {
 
-	margin-left: 13%;
-	margin-top: 10px;	
+	margin-left: 24%;
+margin-bottom: 5%;	
 }
 
 #signup_button {
@@ -111,6 +118,14 @@ footer.navbar-inverse {
 	margin-left: 33.33333%;
 	margin-bottom: 10px;
 
+}
+table tr td:empty {
+    width: 50px;
+}
+
+table tr td {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 

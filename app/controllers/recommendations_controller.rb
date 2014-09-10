@@ -1,5 +1,5 @@
 class RecommendationsController < ApplicationController
-  before_action :set_recommendation, only: [:show, :edit, :update, :destroy]
+  # before_action :set_recommendation, only: [:show, :edit, :update, :destroy]
 
   # GET /recommendations
   # GET /recommendations.json
@@ -10,16 +10,20 @@ class RecommendationsController < ApplicationController
   # GET /recommendations/1
   # GET /recommendations/1.json
   def show
+
+    @recommendation = Recommendation.where(user_id: current_user.id)
   end
 
   # GET /recommendations/new
   def new
     @recommendation = Recommendation.new
-    @the_user = current_user
+    
   end
 
   # GET /recommendations/1/edit
   def edit
+    @recommendation = Recommendation.find(params[:id])
+    
   end
 
   # POST /recommendations
@@ -29,7 +33,7 @@ class RecommendationsController < ApplicationController
 
     respond_to do |format|
       if @recommendation.save
-        format.html { redirect_to @recommendation, notice: 'Recommendation was successfully created.' }
+        format.html { redirect_to '/', notice: 'Recommendation was successfully created.' }
         format.json { render :show, status: :created, location: @recommendation }
       else
         format.html { render :new }
@@ -55,9 +59,11 @@ class RecommendationsController < ApplicationController
   # DELETE /recommendations/1
   # DELETE /recommendations/1.json
   def destroy
+    @recommendation = Recommendation.find(params[:id])
+
     @recommendation.destroy
     respond_to do |format|
-      format.html { redirect_to recommendations_url, notice: 'Recommendation was successfully destroyed.' }
+      format.html { redirect_to '/', notice: 'Recommendation was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

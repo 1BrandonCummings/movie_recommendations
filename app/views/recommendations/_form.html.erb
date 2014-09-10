@@ -1,7 +1,7 @@
+ 
 
 
-
-<%= form_for(@recommendation) do |f| %>
+<%= form_for(@recommendation, url: '/derp') do |f| %>
   <% if @recommendation.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@recommendation.errors.count, "error") %> prohibited this recommendation from being saved:</h2>

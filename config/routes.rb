@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
 
   resources :recommendations
-
-  
+  delete 'delete_rec' => 'recommendations#destroy'
+  post 'derp' => 'recommendations#create'
 
   devise_for :users
-  root 'recommendations#new'
+  root 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
