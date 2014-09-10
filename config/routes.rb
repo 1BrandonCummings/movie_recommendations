@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :recommendations
   delete 'delete_rec' => 'recommendations#destroy'
   post 'derp' => 'recommendations#create'
-
+  post 'upvote' => 'home#upvote'
   devise_for :users
   root 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.

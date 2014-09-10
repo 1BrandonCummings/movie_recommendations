@@ -48,9 +48,15 @@
         <td><h4><%= recommendation.user.email %></h4></td>
         <td></td>
         <% if recommendation.user.id == current_user.id%>
-        <td><%= link_to 'Edit', edit_recommendation_path(recommendation) %></td>
-        <td><%= link_to 'Destroy', '/delete_rec', method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <%else%> <td><h4>Vote</h4></td>
+        
+
+
+
+        <td><%= link_to 'Destroy', recommendation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+       
+
+
+        <%else%> 
         <%end%>
       </tr>
     <% end %>
