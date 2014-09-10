@@ -23,15 +23,15 @@
     <%= f.text_field :genre %>
   </div>
   <div class="field">
-    <%= f.label :watched %><br>
-    <%= f.check_box :watched %>
+    <% f.label :watched %><br>
+    <%= f.hidden_field :watched ,value: 'false' %>
   </div>
   <div class="field">
-    <%= f.label :votes %><br>
-    <%= f.number_field :votes %>
+    <%  f.label :votes %><br>
+    <%= f.hidden_field :votes, value: '1' %>
   </div>
   <div class="field">
-    <%= f.label :user_id %><br>
+    <% f.label :user_id %><br>
     <%= f.hidden_field :user_id, value: current_user.id %>
   </div>
   <div class="actions">

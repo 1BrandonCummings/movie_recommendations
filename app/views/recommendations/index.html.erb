@@ -14,6 +14,7 @@
 
   <tbody>
     <% @recommendations.each do |recommendation| %>
+    
       <tr>
         <td><%= recommendation.title %></td>
         <td><%= recommendation.genre %></td>
@@ -30,4 +31,4 @@
 
 <br>
 
-<%= link_to 'New Recommendation', new_recommendation_path %>
+
