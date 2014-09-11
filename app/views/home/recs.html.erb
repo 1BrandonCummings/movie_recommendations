@@ -1,0 +1,46 @@
+<div class="container-fluid-user-home">
+<div class="row">
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>Popularity</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>Poster</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @all_movies.each do |recommendation| %>
+    <% if recommendation.poster_path != nil%>
+      <tr>
+        <td><h2><%= recommendation.title %></h2></td>
+        <td></td>
+        <td><h4></h4></td>
+        <td></td>
+        <td><h4><%= recommendation.vote_average %></h4></td>
+        <td></td>
+        <td><h4><%= recommendation.realease_date %></h4></td>
+        <td></td>
+
+        <td><h4><img src="http://image.tmdb.org/t/p/w154/<%=recommendation["poster_path"]%>"></h4></td>
+        <td></td>
+        <%else%>
+        <%end%>
+ 
+        
+        <%end%>
+      </tr>
+    
+  </tbody>
+</table>
+</div>
+</div>
+

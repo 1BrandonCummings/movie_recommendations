@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   post 'upvote' => 'home#upvote'
   devise_for :users
   root 'home#index'
+  get 'recs' => 'home#recs'
+  get 'seen' => 'home#seen'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
