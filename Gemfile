@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem 'tzinfo-data'
 group :development do
     gem 'sqlite3'
 end

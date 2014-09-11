@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20140909234723) do
   create_table "recommendations", force: true do |t|
     t.string   "title"
     t.string   "genre"
-    t.boolean  "watched"
+    t.boolean  "watched",    default: false
     t.integer  "votes"
     t.integer  "user_id"
     t.datetime "created_at"
