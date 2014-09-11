@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index
   	@recommendations = Recommendation.all
-
+    @not_seen_movies = Recommendation.where(watched: false).all
   end 
 
   def recs

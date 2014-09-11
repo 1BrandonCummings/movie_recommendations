@@ -35,7 +35,9 @@
   </thead>
 
   <tbody>
-    <% @recommendations.each do |recommendation| %>
+
+    <% @not_seen_movies.each do |recommendation| %>
+
       <tr>
         <td><h4><%= recommendation.title %></h4></td>
         <td></td>
