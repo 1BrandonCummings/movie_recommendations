@@ -1,6 +1,6 @@
 
 <% if user_signed_in? %>
-<div class="row" id="Middle-text"><h1>Here are your friends' recommendations!</h1></div>
+<div class="row" id="Middle-text"><h1 style="color:gray">Here are your friend's recommendations!</h1></div>
 
 <div class="container-fluid-user-home">
 <div class="row"> 
@@ -21,15 +21,15 @@
   <table>
   <thead>
     <tr>
-      <th>Title</th>
+      <th style="color:gray"><h4>Title</h4></th>
       <th></th>
-      <th>Genre</th>
+      <th style="color:gray"><h4>Genre</h4></th>
       <th></th>
-      <th>Watched</th>
+      <th style="color:gray"><h4>Watched</h4></th>
       <th></th>
-      <th>Votes</th>
+      <th style="color:gray"><h4>Votes</h4></th>
       <th></th>
-      <th>User</th>
+      <th style="color:gray"><h4>User</h4></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -54,7 +54,7 @@
 
 
 
-        <td><%= link_to 'Destroy', recommendation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Kill it', recommendation, method: :delete, data: { confirm: 'Seriously?' } %></td>
        
 
 
@@ -67,8 +67,8 @@
     
 
         <% else %>
-<h1>Welcome To The Movie Recommendation App!</h1>
-<p>Go ahead and sign up or sign in</p>
+<p style="color:green;margin-left:20px;">Go ahead and sign up or sign in</p>
+
 
 <p> <%= link_to 'Sign In', new_user_session_path %> </p>
 <p> <%= link_to 'Sign Up', new_user_registration_path %> </p>
